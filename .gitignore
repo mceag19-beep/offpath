@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+.coverage.*
+.venv/
+htmlcov/
+build/
+dist/
+*.egg-info/
+# .offpath/ holds per-developer local timelines and run artifacts
+# (absolute machine paths, command output). Never commit it; reproduce
+# timelines with the test suite or `offpath run` instead.
+.offpath/

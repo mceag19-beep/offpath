@@ -1,0 +1,39 @@
+name: Bug report
+description: Report incorrect behavior, crashes, or misleading output
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What did you run, and what did offpath report?
+      placeholder: |
+        offpath run -- pytest tests/test_refund.py -x
+        [offpath] attempt #2 | SAME_FAILURE | ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect
+      description: Which state, verdict, or exit code did you expect instead, and why?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: >
+        Paste the offpath summary lines and, if possible, the relevant
+        `status --json` excerpt and the contents of `.offpath/runs/NNN/`.
+        Do NOT include secrets or private source beyond what is needed.
+    validations:
+      required: false
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python version (`python --version`), offpath version (`offpath --version`)
+      placeholder: Windows 11, Python 3.12.4, offpath 0.1.0
+    validations:
+      required: true
